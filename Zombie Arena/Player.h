@@ -46,4 +46,38 @@ private:
 	float m_Speed;
 
 	//Public functions
+public:
+
+	Player();
+
+	void spawn(IntRect arena, Vector2f resolution, int tileSize);
+
+	//Call at the end of every game
+	void resetPlayerStats();
+
+	//Handle player getting hit by zombie
+	bool hit(Time timeHit);
+
+	//How long ago was the player hit
+	Time getLastHitTime();
+
+	//Where is the player
+	FloatRect getPosition();
+
+	//Where is the center of the player
+	Vector2f getCenter();
+
+	//What angle is the player facing
+	float getRotation();
+
+	//Send a copy of the sprite to the main function
+	Sprite getSprite();
+
+	//Move the player
+	void moveLeft();
+	void moveRight();
+	void moveUp();
+	void moveDown();
+
+
 };
