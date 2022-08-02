@@ -79,5 +79,24 @@ public:
 	void moveUp();
 	void moveDown();
 
+	//Stop the player moving in a specific direction
+	void stopLeft();
+	void stopRight();
+	void stopUp();
+	void stopDown();
 
+	//Call update function once every frame
+	void update(float elapsedTime, Vector2i mousePosition);
+
+	//Give player speed boost
+	void upgradeSpeed();
+
+	//Give the player some health
+	void upgradeHealth();
+
+	//Increase the maximum amount of health the player can have
+	void increaseHealthLevel(int amount);
+
+	//How much health does the player have
+	int getHealth();
 };
