@@ -50,21 +50,22 @@ public:
 
 	Player();
 
+	//Prepare the object ready for use, putting it in its starting location
 	void spawn(IntRect arena, Vector2f resolution, int tileSize);
 
-	//Call at the end of every game
+	//Call at the end of every game, useful when once the ability to level up
 	void resetPlayerStats();
 
 	//Handle player getting hit by zombie
 	bool hit(Time timeHit);
 
-	//How long ago was the player hit
+	//How long ago was the player hit (used when detecting a collision)
 	Time getLastHitTime();
 
 	//Where is the player
 	FloatRect getPosition();
 
-	//Where is the center of the player
+	//Where is the center of the player (contains just the x and y locations at the very center of the player graphic)
 	Vector2f getCenter();
 
 	//What angle is the player facing
